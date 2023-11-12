@@ -1,0 +1,188 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. This first implementation, only drags three images.
+
+**CODE** 
+*HTML*
+<main class="main-module--main--36zgH"><div class="docs-post-container"><div class="docs-post"><div class="docs-post-content"><h2 id="simple-slide"><a href="#simple-slide" aria-label="simple slide permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple slide</h2>
+    <p>For simple usage, just pass slides as children. You don't need any configuration!</p>
+    
+      <div>
+        <div class="gatsby-render-code"><div class="react-live"><div class="livePreviewWithError"><div class="react-live-preview"><div class="BrainhubCarousel__container"><div class="BrainhubCarousel"><div class="BrainhubCarousel__trackContainer"><ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable" style="width: 2532.66px; transform: translateX(0px); margin-left: 0px; transition-duration: 500ms, 500ms;"><li class="BrainhubCarouselItem BrainhubCarouselItem--active" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg"></li></ul></div></div></div></div></div><pre class="prism-code" spellcheck="false" contenteditable="true"><span class="token comment" spellcheck="true">// import Carousel from '@brainhubeu/react-carousel';</span>
+    <span class="token comment" spellcheck="true">// import '@brainhubeu/react-carousel/lib/style.css';</span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Carousel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageOne<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageTwo<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageThree<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Carousel</span><span class="token punctuation">&gt;</span></span></pre></div></div>
+        <div class="gatsby-render-source-code" style="display:none;">
+        // import Carousel from '@brainhubeu/react-carousel';
+    // import '@brainhubeu/react-carousel/lib/style.css';
+    
+    &lt;Carousel&gt;
+      &lt;img src={imageOne} /&gt;
+      &lt;img src={imageTwo} /&gt;
+      &lt;img src={imageThree} /&gt;
+    &lt;/Carousel&gt;
+        </div>
+      </div></div></div></div></main>
+
+**TEST CASE REQUEST**
+I want you to create a test in Cypress syntax for the following use case:
+As a user, I want to click on the image, drag it to the left three times, and verify that the image is the last one
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/simpleUsage
+Assert image by src
+Use pageX to move mouse
+Move mouse 500px
+Wait 500ms after triggering mousemov
+Force mouseup trigger
+
+------**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. This first implementation, only drags three images.
+
+**CODE** 
+*HTML*
+<main class="main-module--main--36zgH"><div class="docs-post-container"><div class="docs-post"><div class="docs-post-content"><h2 id="simple-slide"><a href="#simple-slide" aria-label="simple slide permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple slide</h2>
+    <p>For simple usage, just pass slides as children. You don't need any configuration!</p>
+    
+      <div>
+        <div class="gatsby-render-code"><div class="react-live"><div class="livePreviewWithError"><div class="react-live-preview"><div class="BrainhubCarousel__container"><div class="BrainhubCarousel"><div class="BrainhubCarousel__trackContainer"><ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable" style="width: 2532.66px; transform: translateX(0px); margin-left: 0px; transition-duration: 500ms, 500ms;"><li class="BrainhubCarouselItem BrainhubCarouselItem--active" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg"></li></ul></div></div></div></div></div><pre class="prism-code" spellcheck="false" contenteditable="true"><span class="token comment" spellcheck="true">// import Carousel from '@brainhubeu/react-carousel';</span>
+    <span class="token comment" spellcheck="true">// import '@brainhubeu/react-carousel/lib/style.css';</span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Carousel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageOne<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageTwo<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageThree<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Carousel</span><span class="token punctuation">&gt;</span></span></pre></div></div>
+        <div class="gatsby-render-source-code" style="display:none;">
+        // import Carousel from '@brainhubeu/react-carousel';
+    // import '@brainhubeu/react-carousel/lib/style.css';
+    
+    &lt;Carousel&gt;
+      &lt;img src={imageOne} /&gt;
+      &lt;img src={imageTwo} /&gt;
+      &lt;img src={imageThree} /&gt;
+    &lt;/Carousel&gt;
+        </div>
+      </div></div></div></div></main>
+
+**TEST CASE REQUEST**
+I want you to create a test in Cypress syntax for the following use case:
+As a user, I want to click on the image, drag it to the left three times, and verify that the image is the last one
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/simpleUsage
+Assert image by src
+Use pageX to move mouse
+Move mouse 500px
+Wait 500ms after triggering mousemov
+Force mouseup trigger
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. This first implementation, only drags three images.
+
+**CODE** 
+*HTML*
+<main class="main-module--main--36zgH"><div class="docs-post-container"><div class="docs-post"><div class="docs-post-content"><h2 id="simple-slide"><a href="#simple-slide" aria-label="simple slide permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple slide</h2>
+    <p>For simple usage, just pass slides as children. You don't need any configuration!</p>
+    
+      <div>
+        <div class="gatsby-render-code"><div class="react-live"><div class="livePreviewWithError"><div class="react-live-preview"><div class="BrainhubCarousel__container"><div class="BrainhubCarousel"><div class="BrainhubCarousel__trackContainer"><ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable" style="width: 2532.66px; transform: translateX(0px); margin-left: 0px; transition-duration: 500ms, 500ms;"><li class="BrainhubCarouselItem BrainhubCarouselItem--active" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg"></li></ul></div></div></div></div></div><pre class="prism-code" spellcheck="false" contenteditable="true"><span class="token comment" spellcheck="true">// import Carousel from '@brainhubeu/react-carousel';</span>
+    <span class="token comment" spellcheck="true">// import '@brainhubeu/react-carousel/lib/style.css';</span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Carousel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageOne<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageTwo<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageThree<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Carousel</span><span class="token punctuation">&gt;</span></span></pre></div></div>
+        <div class="gatsby-render-source-code" style="display:none;">
+        // import Carousel from '@brainhubeu/react-carousel';
+    // import '@brainhubeu/react-carousel/lib/style.css';
+    
+    &lt;Carousel&gt;
+      &lt;img src={imageOne} /&gt;
+      &lt;img src={imageTwo} /&gt;
+      &lt;img src={imageThree} /&gt;
+    &lt;/Carousel&gt;
+        </div>
+      </div></div></div></div></main>
+
+**TEST CASE REQUEST**
+I want you to create a test in Cypress syntax for the following use case:
+As a user, I want to click on the image, drag it to the right, and verify that the image is still mona
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/simpleUsage
+Assert image by src
+Use pageX to move mouse
+Move mouse 500px
+Wait 500ms after triggering mousemov
+Force mouseup trigger
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. This first implementation, only drags three images.
+
+**CODE** 
+*HTML*
+<main class="main-module--main--36zgH"><div class="docs-post-container"><div class="docs-post"><div class="docs-post-content"><h2 id="simple-slide"><a href="#simple-slide" aria-label="simple slide permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple slide</h2>
+    <p>For simple usage, just pass slides as children. You don't need any configuration!</p>
+    
+      <div>
+        <div class="gatsby-render-code"><div class="react-live"><div class="livePreviewWithError"><div class="react-live-preview"><div class="BrainhubCarousel__container"><div class="BrainhubCarousel"><div class="BrainhubCarousel__trackContainer"><ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable" style="width: 2532.66px; transform: translateX(0px); margin-left: 0px; transition-duration: 500ms, 500ms;"><li class="BrainhubCarouselItem BrainhubCarouselItem--active" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg"></li><li class="BrainhubCarouselItem" style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;"><img src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg"></li></ul></div></div></div></div></div><pre class="prism-code" spellcheck="false" contenteditable="true"><span class="token comment" spellcheck="true">// import Carousel from '@brainhubeu/react-carousel';</span>
+    <span class="token comment" spellcheck="true">// import '@brainhubeu/react-carousel/lib/style.css';</span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Carousel</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageOne<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageTwo<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageThree<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Carousel</span><span class="token punctuation">&gt;</span></span></pre></div></div>
+        <div class="gatsby-render-source-code" style="display:none;">
+        // import Carousel from '@brainhubeu/react-carousel';
+    // import '@brainhubeu/react-carousel/lib/style.css';
+    
+    &lt;Carousel&gt;
+      &lt;img src={imageOne} /&gt;
+      &lt;img src={imageTwo} /&gt;
+      &lt;img src={imageThree} /&gt;
+    &lt;/Carousel&gt;
+        </div>
+      </div></div></div></div></main>
+
+**TEST CASE REQUEST**
+I want you to create a test in Cypress syntax for the following use case:
+As a user, I want to click on the image, drag it to the left 500px, and verify that the image is not mona anymore, it is scream
+Remember that I want only the code, I don’t need ANY explanation.
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/simpleUsage
+Assert image by src
+Use pageX to move mouse
+Wait 500ms after triggering mousemov
+Force mouseup trigger

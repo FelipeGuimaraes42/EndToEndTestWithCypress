@@ -1,0 +1,89 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. In this implementation, you can click on image thumbnails just below the image.
+
+**CODE** 
+*HTML*
+<main class="main-module--main--36zgH">
+    <div class="docs-post-container">
+        <div class="docs-post">
+            <div class="docs-post-content">
+                <h2 id="thumbnails"><a href="#thumbnails" aria-label="thumbnails permalink" class="anchor"><svg
+                            aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16"
+                            width="16">
+                            <path fill-rule="evenodd"
+                                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+                            </path>
+                        </svg></a>Thumbnails</h2>
+                <p>You can use Dots component to show thumbnails.</p>
+
+                <div>
+                    <div class="gatsby-render-code">
+                        <div class="react-live">
+                            <div class="livePreviewWithError">
+                                <div class="react-live-preview">
+                                    <div>
+                                        <div class="BrainhubCarousel__container">
+                                            <div class="BrainhubCarousel">
+                                                <div class="BrainhubCarousel__trackContainer">
+                                                    <ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable"
+                                                        style="width: 2532.66px; transform: translateX(0px); margin-left: 0px; transition-duration: 500ms, 500ms;">
+                                                        <li class="BrainhubCarouselItem BrainhubCarouselItem--active"
+                                                            style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                            <img
+                                                                src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg">
+                                                        </li>
+                                                        <li class="BrainhubCarouselItem"
+                                                            style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                            <img
+                                                                src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg">
+                                                        </li>
+                                                        <li class="BrainhubCarouselItem"
+                                                            style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                            <img
+                                                                src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="BrainhubCarousel__dots">
+                                            <li>
+                                                <div class="BrainhubCarousel__thumbnail BrainhubCarousel__thumbnail--selected"
+                                                    type="button"><img
+                                                        src="data:image/jpeg;base64,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">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="BrainhubCarousel__thumbnail" type="button"><img
+                                                        src="data:image/jpeg;base64,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">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="BrainhubCarousel__thumbnail" type="button"><img
+                                                        src="data:image/jpeg;base64,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">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I want to click on an image and see it highlighted.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/thumbnails
+Assert highlighted image by its src, verifying if it contains the painting name. First is mona, second is scream and third is starry.

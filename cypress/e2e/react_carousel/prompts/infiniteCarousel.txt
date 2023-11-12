@@ -1,0 +1,94 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the Javascript code below and want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of the Carousel React Component. It is required to make carousel images on front-end. In this third implementation, the images will keep passing limitless, one after another, with a delay of 3 seconds from one to another. There are three images that keep passing.
+
+**CODE** 
+*HTML*
+<div class="docs-post">
+    <div class="docs-post-content">
+        <h2 id="autoplay--animation-speed"><a href="#autoplay--animation-speed"
+                aria-label="autoplay  animation speed permalink" class="anchor"><svg aria-hidden="true"
+                    focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+                    <path fill-rule="evenodd"
+                        d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+                    </path>
+                </svg></a>Autoplay &amp; Animation speed</h2>
+        <p>You can set how often slides will change automatically using the <code class="language-text">autoPlay</code>
+            plugin and interval option. Animation speed can also be changed, using animationSpeed prop (which is
+            actually animation duration in ms).</p>
+
+        <div>
+            <div class="gatsby-render-code">
+                <div class="react-live">
+                    <div class="livePreviewWithError">
+                        <div class="react-live-preview">
+                            <div class="BrainhubCarousel__container">
+                                <div class="BrainhubCarousel">
+                                    <div class="BrainhubCarousel__trackContainer">
+                                        <ul class="BrainhubCarousel__track BrainhubCarousel__track--transition BrainhubCarousel__track--draggable"
+                                            style="width: 27859.2px; transform: translateX(-19412px); margin-left: 0px; transition-duration: 1000ms, 1000ms;">
+                                            <li class="BrainhubCarouselItem"
+                                                style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                <img
+                                                    src="/react-carousel/static/mona-7a1ceae9bdb8c43272eb101c091c5408.jpg">
+                                            </li>
+                                            <li class="BrainhubCarouselItem"
+                                                style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                <img
+                                                    src="/react-carousel/static/scream-ee207a05c1e6fed03aafa156cc511abe.jpg">
+                                            </li>
+                                            <li class="BrainhubCarouselItem"
+                                                style="margin-right: 0px; margin-left: 0px; width: 844px; max-width: 844px; min-width: 844px;">
+                                                <img
+                                                    src="/react-carousel/static/starry-night-39eed0a107ddb6c9f980eb3081a8bdd3.jpg">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <pre class="prism-code" spellcheck="false"
+                        contenteditable="true"><span class="token comment" spellcheck="true">// import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';</span>
+    <span class="token comment" spellcheck="true">// import '@brainhubeu/react-carousel/lib/style.css';</span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Carousel</span>
+        <span class="token attr-name">plugins</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>
+         <span class="token string">'infinite'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          resolve<span class="token punctuation">:</span> autoplayPlugin<span class="token punctuation">,</span>
+          options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            interval<span class="token punctuation">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span></span><span class="token attr-name">,</span>
+      <span class="token attr-name">]}</span>   
+      <span class="token attr-name">animationSpeed</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">1000</span><span class="token punctuation">}</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageOne<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageTwo<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>imageThree<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Carousel</span><span class="token punctuation">&gt;</span></span></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I want to be able to see all images on the carousel.
+2) As a user, I want to see the images after they already passed.
+3) As a user, I want to see the first image again, after the carousel restarts.
+
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is: https://brainhubeu.github.io/react-carousel/docs/examples/animation
+Assert image by src
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+almost right, but I want you to assert the image by its src
