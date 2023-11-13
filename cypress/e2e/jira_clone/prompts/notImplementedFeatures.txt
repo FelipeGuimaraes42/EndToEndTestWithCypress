@@ -1,0 +1,49 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of an application very similar to Jira. In this HTML section, you can see functionalities that exist in Jira but were not implemented in this clone.
+
+**CODE** 
+*HTML*
+<div class="sc-kaNhvL frvEnU">
+    <div class="sc-ktHwxA biaEeH">
+        <div class="sc-cmTdod ewIogW"></div>
+        <div class="sc-jwKygS heSyuF"><i class="sc-bdVaJa cdowYF" size="16" data-testid="icon:shipping"></i>
+            <div class="sc-btzYZH dGXYy">Releases</div>
+            <div class="sc-lhVmIH cGkyhG">Not implemented</div>
+        </div>
+        <div class="sc-jwKygS heSyuF"><i class="sc-bdVaJa ZqgRw" size="16" data-testid="icon:issues"></i>
+            <div class="sc-btzYZH dGXYy">Issues and filters</div>
+            <div class="sc-lhVmIH cGkyhG">Not implemented</div>
+        </div>
+        <div class="sc-jwKygS heSyuF"><i class="sc-bdVaJa cGFvNZ" size="16" data-testid="icon:page"></i>
+            <div class="sc-btzYZH dGXYy">Pages</div>
+            <div class="sc-lhVmIH cGkyhG">Not implemented</div>
+        </div>
+        <div class="sc-jwKygS heSyuF"><i class="sc-bdVaJa dDhogt" size="16" data-testid="icon:reports"></i>
+            <div class="sc-btzYZH dGXYy">Reports</div>
+            <div class="sc-lhVmIH cGkyhG">Not implemented</div>
+        </div>
+        <div class="sc-jwKygS heSyuF"><i class="sc-bdVaJa jlOrUy" size="16" data-testid="icon:component"></i>
+            <div class="sc-btzYZH dGXYy">Components</div>
+            <div class="sc-lhVmIH cGkyhG">Not implemented</div>
+        </div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to click on Releases link, but it should not do anything.
+2) As a user, I should be able to click on Issues and filters link, but it should not do anything.
+2) As a user, I should be able to click on Pages link, but it should not do anything.
+3) As a user, I should be able to click on Reports link, but it should not do anything.
+4) As a user, I should be able to click on Components link, but it should not do anything.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Assert that URL was not redirected.
+Create all use cases in one test case.
+Wait 15 seconds to load the page.
