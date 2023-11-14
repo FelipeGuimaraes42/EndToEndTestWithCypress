@@ -1,0 +1,69 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of an application very similar to Jira. The following HTML fragments represents
+the main page, and after clicking, the create issue scream.
+
+**CODE**
+*Home*
+<div class="sc-kaNhvL frvEnU">
+    <aside class="sc-bbmXgH crBwJf"><a aria-current="page" class="sc-gGBfsJ ZZmnY active" href="/"></a>
+        ...
+        <div class="sc-tilXH jrvNAG"><i size="27" class="sc-bdVaJa kvqJDi" data-testid="icon:plus"></i>
+            <div class="sc-hEsumM jftKLf">Create Issue</div>
+        </div>
+        ...
+    </aside>
+    ...
+</div>
+
+*Issue creation*
+<div class="sc-fjdhpX bkXbBP" width="800" data-testid="modal:issue-create">
+    <form action="#" novalidate="" class="sc-dliRfk cUCuaf">
+        <div class="sc-ipZHIp ljPuYA"></div>
+        <div class="sc-eqIVtm bdFicS" data-testid="form-field:title"><label for="form-field-16"
+                class="sc-fAjcbJ fcGLnQ">Short Summary</label>
+            <div class="sc-kpOJdX bYAXKl"><input id="form-field-16" name="title" class="sc-dxgOiQ HrhWu" value=""></div>
+            <div class="sc-caSCKo jgKtPh">Concisely summarize the issue in one or two sentences.</div>
+        </div>
+        <div class="sc-eqIVtm bdFicS" data-testid="form-field:description"><label for="form-field-17"
+                class="sc-fAjcbJ fcGLnQ">Description</label>
+            <div class="sc-dVhcbM kKkMFm">
+                <div class="ql-container ql-snow">
+                    <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true" spellcheck="false">
+                        <p><br></p>
+                    </div>
+                    <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                    <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank"
+                            href="about:blank"></a><input type="text" data-formula="e=mc^2"
+                            data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a
+                            class="ql-remove"></a></div>
+                </div>
+            </div>
+            <div class="sc-caSCKo jgKtPh">Describe the issue in as much detail as you'd like.</div>
+        </div>
+        <div class="sc-iGrrsa fvPBxV">
+            <button type="submit" class="sc-bwzfXH dIxFno sc-bmyXtO fjLWRM">
+                <div class="sc-bxivhb rljZq">Create Issue</div>
+            </button>
+            <button type="button" class="sc-bwzfXH jYbwSu sc-bmyXtO fjLWRM">
+                <div class="sc-bxivhb rljZq">Cancel</div>
+            </button>
+        </div>
+    </form>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to create an issue.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Use data-testid as the reference of field, for button use type
+Wait 15 seconds after the page loads.
+Summary and description should be "E2E Test With Cypress"
+Wait at most 12 seconds after submitting to assert "Issue has been successfully created."
