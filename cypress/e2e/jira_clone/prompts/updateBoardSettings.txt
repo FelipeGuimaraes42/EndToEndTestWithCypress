@@ -1,0 +1,121 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of an application very similar to Jira. The following HTML fragments represent a card on the Kanban board, and after clicking, the card description. The status appears after clicking on it.
+
+**CODE**
+*Home*
+<div class="sc-ktHwxA biaEeH">
+    <div class="sc-cIShpX edbbcV">
+        <div class="sc-kafWEX eVrMiX">
+            <div class="sc-feJyhm jwrhXI">singularity 1.0</div>
+            <div class="sc-iELTvK fFTIzJ">Software project</div>
+        </div>
+    </div><a aria-current="page" class="sc-jwKygS hJOZbV active" href="/project/board"><i class="sc-bdVaJa itayek"
+            size="16" data-testid="icon:board"></i>
+        <div class="sc-btzYZH dGXYy">Kanban Board</div>
+    </a><a class="sc-jwKygS hJOZbV" href="/project/settings"><i class="sc-bdVaJa gvhNpZ" size="16"
+            data-testid="icon:settings"></i>
+        <div class="sc-btzYZH dGXYy">Project settings</div>
+    </a>
+</div>
+
+*Project Settings*
+<div class="sc-dEoRIm gRVcrr">
+    <form action="#" novalidate="" class="sc-jtggT cGBgMQ">
+        <div class="sc-gZMcBi csNkae">Projects<span class="sc-gqjmRU eFAmWt">/</span>singularity 1.0<span
+                class="sc-gqjmRU eFAmWt">/</span>Project Details</div>
+        <h1 class="sc-ebFjAB jHOxEF">Project Details</h1>
+        <div data-testid="form-field:name"><label for="form-field-1" class="sc-fAjcbJ fcGLnQ">Name</label>
+            <div class="sc-kpOJdX bYAXKl">
+                <input id="form-field-1" name="name" class="sc-dxgOiQ HrhWu" value="singularity 1.0">
+            </div>
+        </div>
+        <div data-testid="form-field:url"><label for="form-field-2" class="sc-fAjcbJ fcGLnQ">URL</label>
+            <div class="sc-kpOJdX bYAXKl">
+                <input id="form-field-2" name="url" class="sc-dxgOiQ HrhWu"
+                    value="https://www.atlassian.com/software/jira">
+            </div>
+        </div>
+        <div data-testid="form-field:description"><label for="form-field-3" class="sc-fAjcbJ fcGLnQ">Description</label>
+            <div class="sc-dVhcbM kKkMFm">
+                <div class="ql-container ql-snow">
+                    <div class="ql-editor" data-gramm="false" contenteditable="true">
+                        <p>Plan, track, and manage your agile and software development projects in Jira. Customize your
+                            workflow, collaborate, and release great software.</p>
+                    </div>
+                    <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                    <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank"
+                            href="about:blank"></a><input type="text" data-formula="e=mc^2"
+                            data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a
+                            class="ql-remove"></a></div>
+                </div>
+            </div>
+            <div class="sc-caSCKo jgKtPh">Describe the project in as much detail as you'd like.</div>
+        </div>
+        <div data-testid="form-field:category"><label for="form-field-4" class="sc-fAjcbJ fcGLnQ">Project
+                Category</label>
+            <div class="sc-cMljjf djLNmN" tabindex="0">
+                <div data-testid="select:category" class="sc-jAaTju iRpdtC">Software<i
+                        class="sc-bdVaJa ivvRcT sc-jDwBTQ cnPHYB" size="16" data-testid="icon:chevron-down"></i></div>
+            </div>
+        </div>
+        <button type="submit" class="sc-bwzfXH dIxFno sc-jKVCRD fWYQdH">
+            <div class="sc-bxivhb rljZq">Save changes</div>
+        </button>
+    </form>
+</div>
+
+*Project Category*
+<div class="sc-hzDkRC OIdAg">
+    <div data-select-option-value="marketing" data-testid="select-option:Marketing"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">Marketing</div>
+    <div data-select-option-value="business" data-testid="select-option:Business" class="sc-jhAzac eiGXZa">Business
+    </div>
+    <div data-select-option-value="software" data-testid="select-option:Software"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">Software</div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to update name, URL, description and category of my board.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Use data-testid whenever possible
+Wait 15 seconds after the page loads.
+Wait 5 seconds after opening and closing project settings.
+
+
+------------------
+save changes by clicking on submit button instead of the following code, all rest should be the same:
+    cy.get('[data-testid="form-field:category"] button').click();
+    cy.wait(5000);
+
+------------------
+no, use button tye submit
+
+
+
+------------------
+
+create now a assert for the following text Changes have been saved successfully.
+
+
+------------------
+
+create now an assert that verifies if the project name has been updated. The div has the following class: sc-feJyhm jwrhXI
+
+
+------------------
+
+the update takes time, add a wait before asserting the update
+
+
+------------------
+
+reloads the page and asserts the inputs have being updated with the values passed on test
