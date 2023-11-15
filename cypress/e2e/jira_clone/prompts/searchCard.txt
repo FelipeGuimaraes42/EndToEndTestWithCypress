@@ -1,0 +1,40 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of an application very similar to Jira. The following HTML fragments represent a card on the Kanban board, and after clicking, the card description. The status appears after clicking on it.
+
+**CODE**
+*Search*
+<div class="sc-kpOJdX bYAXKl sc-kTUwUJ bLDwTk"><i size="15" class="sc-bdVaJa beMSwS sc-ckVGcZ kziXxR"
+        data-testid="icon:search"></i><input class="sc-dxgOiQ fIePHj" value=""></div>
+
+*Board*
+<div class="sc-hrWEMg efIbEb">
+    ...
+</div>
+
+*Card*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+    <div class="sc-esjQYD DdvSq">
+        <div><i color="task" size="18" class="sc-bdVaJa kvCxvD sc-kjoXOD bTEsIL" data-testid="icon:task"></i><i
+                color="4" size="18" class="sc-bdVaJa fDMFeQ sc-cHGsZl fuuzHm" data-testid="icon:arrow-up"></i></div>
+        <div class="sc-kIPQKe kyHxVW"></div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to search for a card.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+ Search for 'This is an issue of type'.
+Wait 1s after searching.
+After searching, verify if the card is in the board. Use a contains in board id
+Don't need to click in anything to search, as you type the cards will be filtered.
