@@ -1,0 +1,73 @@
+Even with all attempts below, I couldn't get the right test.
+The original test is not easy to understand: https://github.com/oldboyxx/jira_clone/blob/master/client/cypress/integration/issuesDragDrop.spec.js
+
+In theory, the test does what it was supposed to do: open card, verify its status, return, click on it, drag it, release it and verify its status.
+But something about the implementation doesn't let it be dragged.
+
+--------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is the HTML demonstration of an application very similar to Jira. The following HTML fragments represent the selected card, and after clicking, the card description.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">Try dragging issues to different columns to transition their status.</p>
+    <div class="sc-esjQYD DdvSq">
+        <div><i color="story" size="18" class="sc-bdVaJa KINfj sc-kjoXOD fVfqaX" data-testid="icon:story"></i><i
+                color="3" size="18" class="sc-bdVaJa fDMFeQ sc-cHGsZl gxNxeT" data-testid="icon:arrow-up"></i></div>
+        <div class="sc-kIPQKe kyHxVW"></div>
+    </div>
+</div>
+
+*Card description*
+<div class="sc-jTzLTM bBEgKU">
+    <div class="sc-fYiAbW erRKGE">
+        <div class="sc-gHboQg cTinVM">Status</div>
+        <div class="sc-cMljjf jnweIx" tabindex="0">
+            <div data-testid="select:status" class="sc-jAaTju kMAIqY">
+                <div color="backlog" class="sc-eilVRo kvGNcT">
+                    <div>Backlog</div><i size="18" class="sc-bdVaJa RfveL" data-testid="icon:chevron-down"></i>
+                </div>
+            </div>
+        </div>
+        <button class="sc-bwzfXH hHoJg"><i size="24" color="#42526E" class="sc-bdVaJa fuyACr"
+                data-testid="icon:close"></i></button>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to move an issue to update its status.
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Move the card 100 px to the right.
+Before moving, click on the card and assert its status, then, return to home by clicking on the close button.
+After moving, click on the card again and assert that its status has changed.
+
+-------
+
+use data-testid to reference the card, the class is not unique
+
+-------
+
+didn't work either, get card, then, by its content "Try dragging issues to different columns to transition their status."
+
+
+-------
+
+trigger should also pass the contains
+
+
+-------
+
+The mouse movement isn't working, try another way
+
