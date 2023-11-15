@@ -1,0 +1,54 @@
+In this case I was expecting two tests, but the test that I uploaded on git was not edited.
+It saved it in one test. Better than I thought!
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Filter buttons*
+<button class="sc-bwzfXH jYbwSu sc-gzOgki gLPSFk">
+    <div class="sc-bxivhb rljZq">Only My Issues</div>
+</button>
+<button class="sc-bwzfXH jYbwSu sc-gzOgki gLPSFk">
+    <div class="sc-bxivhb rljZq">Recently Updated</div>
+</button>
+
+*Board*
+<div class="sc-hrWEMg efIbEb">
+    ...
+</div>
+
+*My card (inside board)*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">Each issue has a single reporter but can have multiple assignees.</p>
+</div>
+
+*Not my card (inside board)*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">Click on an issue to see what's behind it.</p>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to filter only cards that are assigned to me.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Use text for getting components, as id is not unique
+Verify, after clicking on the board, that my card is there and the card that is not mine, is not
+
+---------------
+
+Another use case: As a user, I should be able to clear all filters and click on another one.
+
+For this use case, clear filters and then click on recent updated button. The card that wasn't appearing before should appear again.
+
+The clear filter button is:
+*Clear Filters*
+<div class="sc-iyvyFf eWAgnI">Clear all</div>
