@@ -1,0 +1,65 @@
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Search Button*
+<div class="sc-tilXH jrvNAG"><i size="22" class="sc-bdVaJa eUCbpK" data-testid="icon:search"></i>
+    <div class="sc-hEsumM jftKLf">Search issues</div>
+</div>
+
+*Search Input*
+<div class="sc-kpOJdX bYAXKl sc-eMigcr fOaoty"><input placeholder="Search issues by summary, description..."
+        class="sc-dxgOiQ HrhWu" value=""></div>
+
+*Search Result*
+<div class="sc-dTdPqK ipOwpR"></div>
+
+*Card on Search Result*
+<div class="sc-jVODtj kSPHKR"><i color="task" size="25" class="sc-bdVaJa lhYezB sc-kjoXOD bTEsIL"
+        data-testid="icon:task"></i>
+    <div class="sc-kUaPvJ cqXKaV">
+        <div class="sc-giadOv gJnbDa">This is an issue of type: Task.</div>
+        <div class="sc-fONwsr kpdcqz">task-1776146</div>
+    </div>
+</div>
+
+*Error message*
+<div class="sc-hmXxxW jzsbtO">We couldn't find anything matching your search</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to search for an issue.
+2) As a user I should see an error message when searching for a card that doesn't exist
+Remember that I want only the code, I don’t need ANY explanation.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Search for 'This is an issue of type' first, then for wasd
+Wait 10s after searching.
+Don't need to click on anything to search, as you type the cards will be filtered.
+After typing, verify if the card is on the result
+Both test cases can be done on the same test
+
+-----------------
+
+You missed clicking on the search button, it can be on beforeEach section
+
+-----------------
+
+use testid to get the search button
+
+-----------------
+
+there are two with this same testid, get the first one
+
+-----------------
+
+get input by its placeholder, as there are more elements with this id
+
