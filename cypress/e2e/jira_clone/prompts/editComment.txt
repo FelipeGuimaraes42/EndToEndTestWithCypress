@@ -1,0 +1,69 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">Try leaving a comment on this issue.</p>
+</div>
+
+*Card Comments (Appears after clicking on a card on home)*
+<div class="sc-lkqHmb gsgSvC">
+    <div class="sc-eLExRp jGNeK">Comments</div>
+    <div class="sc-cLQEGU cERWQQ">
+        <div class="sc-dnqmqq kyWavj sc-gqPbQI kmDcgQ" size="32" data-testid="avatar:Lord Gaben"></div>
+        <div class="sc-hORach kDrhqS">
+            <div class="sc-bMVAic cnatGv">Add a comment...</div>
+            <div class="sc-cmthru gWQavD"><strong>Pro tip:</strong>press<span class="sc-hMFtBS dYGAef">M</span>to
+                comment</div>
+        </div>
+    </div>
+    <div data-testid="issue-comment" class="sc-bAeIUo jAOTgb">
+        <div class="sc-dnqmqq kyWavj sc-iujRgT DPDSw" size="32" data-testid="avatar:Lord Gaben"></div>
+        <div class="sc-GMQeP cHeVrM">
+            <div class="sc-exAgwC eYNjmZ">Lord Gaben</div>
+            <div class="sc-cQFLBn guYMev">3 days ago</div>
+            <p class="sc-gojNiO cYOpjs">Everything I touch
+                with tenderness, alas,
+                pricks like a bramble.</p>
+            <div class="sc-daURTG bBZxGK">Edit</div>
+            <div class="sc-bXGyLb dvzGmn">Delete</div>
+        </div>
+    </div>
+</div>
+
+*Card Edition*
+<textarea placeholder="Add a comment..." style="height: 83px;" spellcheck="false">
+    Everything I touch
+    with tenderness, alas,
+    pricks like a bramble.
+</textarea>
+
+*Save or Cancel Edit*
+<div class="sc-iuJeZd kJzFof">
+    <button class="sc-bwzfXH dIxFno sc-esOvli keRYgb">
+        <div class="sc-bxivhb rljZq">Save</div>
+    </button><button class="sc-bwzfXH jYbwSu sc-esOvli keRYgb">
+        <div class="sc-bxivhb rljZq">Cancel</div>
+    </button>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit a comment saved on an issue.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+After clicking on edit, the cursor will be at the start of the comment, so to simplify, type the biggest english word and a space, save it, wait 3s and assert that this word is on the page
+Use contains to get components.
+
+-----------
+
+there are two '.sc-fMiknA.edMYdI textarea', get the second one
