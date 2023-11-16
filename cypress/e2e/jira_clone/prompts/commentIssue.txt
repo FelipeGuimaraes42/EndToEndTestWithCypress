@@ -1,0 +1,48 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on board*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">Try leaving a comment on this issue.</p>
+</div>
+
+*Card Details*
+<div class="sc-cbkKFq kSPstu">
+    <div class="sc-krvtoX cysrKt">
+        <div class="sc-lkqHmb gsgSvC">
+            <div class="sc-cLQEGU cERWQQ">
+                <div class="sc-dnqmqq kyWavj sc-gqPbQI kmDcgQ" size="32" data-testid="avatar:Lord Gaben"></div>
+                <div class="sc-hORach kDrhqS">
+                    <div class="sc-bMVAic cnatGv">Add a comment...</div>
+                    ...
+                </div>
+
+*Buttons that appear after typing something on comment section*
+<div class="sc-iuJeZd kJzFof">
+    <button class="sc-bwzfXH dIxFno sc-esOvli keRYgb">
+        <div class="sc-bxivhb rljZq">Save</div>
+    </button>
+</div>
+
+*The comment will be created like this one*
+<div>
+    <p>Comment</p>
+    <div>Edit</div>
+    <div>Delete</div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to add a comment on an issue.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details and to assert the comment added.
+Use contains to get components.
