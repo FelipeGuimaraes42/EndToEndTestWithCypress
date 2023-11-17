@@ -56,3 +56,314 @@ there are more cards with that id, use text as well
 
 add an assert after updating the status
 
+------------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+<div class="sc-gHboQg cTinVM">Assignees</div>
+<div class="sc-cMljjf jnweIx" tabindex="0">
+    <div data-testid="select:assignees" class="sc-jAaTju kMAIqY">
+        <div class="sc-gPEVay jzkkwe">Unassigned</div>
+    </div>
+</div>
+
+*Click Assignees Status*
+<div class="sc-hzDkRC OIdAg">
+    <div data-select-option-value="652567" data-testid="select-option:Pickle Rick"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">
+        <div class="sc-eerKOB bIUyqH">
+            <div class="sc-dnqmqq jqCWTw" size="24" data-testid="avatar:Pickle Rick"></div>
+            <div class="sc-emmjRN goRxlI">Pickle Rick</div>
+        </div>
+    </div>
+    <div data-select-option-value="652569" data-testid="select-option:Baby Yoda" class="sc-jhAzac eiGXZa">
+        <div class="sc-eerKOB bIUyqH">
+            <div class="sc-dnqmqq fyOJwC" size="24" data-testid="avatar:Baby Yoda"></div>
+            <div class="sc-emmjRN goRxlI">Baby Yoda</div>
+        </div>
+    </div>
+    <div data-select-option-value="652568" data-testid="select-option:Lord Gaben" class="sc-jhAzac eiGXZa">
+        <div class="sc-eerKOB bIUyqH">
+            <div class="sc-dnqmqq eaoUYL" size="24" data-testid="avatar:Lord Gaben"></div>
+            <div class="sc-emmjRN goRxlI">Lord Gaben</div>
+        </div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Click on the card, wait 3s, click on the unassigned, and update it to Baby Yoda, by its data-testid.
+there are more cards with that id, use text as well
+add an assert after updating the status
+
+    --------------------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+<div class="sc-gHboQg cTinVM">Reporter</div>
+<div class="sc-cMljjf jnweIx" tabindex="0">
+    <div data-testid="select:reporter" class="sc-jAaTju kMAIqY">
+        <div class="sc-eerKOB fpimay">
+            <div class="sc-dnqmqq fyOJwC" size="24" data-testid="avatar:Baby Yoda"></div>
+            <div class="sc-emmjRN goRxlI">Baby Yoda</div>
+        </div>
+    </div>
+</div>
+
+*Click Reporter*
+<div class="sc-hzDkRC OIdAg">
+    <div data-select-option-value="652567" data-testid="select-option:Pickle Rick"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">
+        <div class="sc-eerKOB bIUyqH">
+            <div class="sc-dnqmqq jqCWTw" size="24" data-testid="avatar:Pickle Rick"></div>
+            <div class="sc-emmjRN goRxlI">Pickle Rick</div>
+        </div>
+    </div>
+    <div data-select-option-value="652568" data-testid="select-option:Lord Gaben" class="sc-jhAzac eiGXZa">
+        <div class="sc-eerKOB bIUyqH">
+            <div class="sc-dnqmqq eaoUYL" size="24" data-testid="avatar:Lord Gaben"></div>
+            <div class="sc-emmjRN goRxlI">Lord Gaben</div>
+        </div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Click on the card, wait 3s, click reporter, and update it to Pickle Rick, by its data-testid.
+there are more cards with that id, use text as well
+add an assert after updating the status
+
+    --------------------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+<div class="sc-gHboQg cTinVM">Priority</div>
+    <div class="sc-cMljjf jnweIx" tabindex="0">
+        <div data-testid="select:priority" class="sc-jAaTju kMAIqY">
+            <div class="sc-cpmLhU dCLQTz"><i color="4" size="18" class="sc-bdVaJa dvEloM sc-cHGsZl fuuzHm"
+                    data-testid="icon:arrow-up"></i>
+                <div class="sc-dymIpo jpWath">High</div>
+            </div>
+        </div>
+    </div>
+
+*Click Priority*
+<div class="sc-hzDkRC OIdAg">
+    <div data-select-option-value="5" data-testid="select-option:Highest" class="sc-jhAzac eiGXZa">
+        <div class="sc-cpmLhU bAPjBE"><i color="5" size="18" class="sc-bdVaJa dvEloM sc-cHGsZl iWjCGU"
+                data-testid="icon:arrow-up"></i>
+            <div class="sc-dymIpo jpWath">Highest</div>
+        </div>
+    </div>
+    <div data-select-option-value="3" data-testid="select-option:Medium" class="sc-jhAzac eiGXZa">
+        <div class="sc-cpmLhU bAPjBE"><i color="3" size="18" class="sc-bdVaJa dvEloM sc-cHGsZl gxNxeT"
+                data-testid="icon:arrow-up"></i>
+            <div class="sc-dymIpo jpWath">Medium</div>
+        </div>
+    </div>
+    <div data-select-option-value="2" data-testid="select-option:Low" class="sc-jhAzac eiGXZa">
+        <div class="sc-cpmLhU bAPjBE"><i color="2" size="18" class="sc-bdVaJa jqzjbn sc-cHGsZl gnyGFF"
+                data-testid="icon:arrow-down"></i>
+            <div class="sc-dymIpo jpWath">Low</div>
+        </div>
+    </div>
+    <div data-select-option-value="1" data-testid="select-option:Lowest"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">
+        <div class="sc-cpmLhU bAPjBE"><i color="1" size="18" class="sc-bdVaJa jqzjbn sc-cHGsZl MloIN"
+                data-testid="icon:arrow-down"></i>
+            <div class="sc-dymIpo jpWath">Lowest</div>
+        </div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Click on the card, wait 3s, click reporter, and update it to Highest.
+there are more cards with that id, use text as well
+add an assert after updating the status
+
+---------------------
+
+Syntax error, unrecognized expression: [data-testid=select:priority]
+
+--------------------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+<div class="sc-fYiAbW erRKGE">
+    <div class="sc-gHboQg cTinVM">Original Estimate (hours)</div>
+    <div class="sc-kpOJdX bYAXKl"><input placeholder="Number" class="sc-dxgOiQ HrhWu" value="8"></div>
+
+*Click Original Estimate*
+<div class="sc-kpOJdX bYAXKl"><input placeholder="Number" class="sc-dxgOiQ HrhWu" value="8"></div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Reduce the estimate to 6h
+there are more cards with that id, use text as well
+assert the changes
+
+-----------------------
+
+get('.sc-kpOJdX.bYAXKl') .find('input') finds two inputs, get the second one
+
+
+------------------------
+
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+    <div class="sc-gHboQg cTinVM">Time Tracking</div>
+    <div class="sc-bMvGRv IstSR">
+        <div class="sc-bnXvFD eorMUq"><i size="26" class="sc-bdVaJa gAsYWw sc-gFaPwZ jcZzPk"
+                data-testid="icon:stopwatch"></i>
+            <div class="sc-fhYwyz jxvanQ">
+                <div class="sc-jzgbtB iHRDZQ">
+                    <div width="50" class="sc-gJWqzi htEIqN"></div>
+                </div>
+                <div class="sc-rBLzX irwmBe">
+                    <div>4h logged</div>
+                    <div>8h estimated</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sc-krDsej hZoggr">
+        <div>Created at 4 days ago</div>
+        <div>Updated at 4 days ago</div>
+    </div>
+</div>
+
+*Click Time Tracking*
+<div class="sc-CtfFt ibRYdW">
+    <div class="sc-laTMn gQWBhO">Time tracking</div>
+    <div class="sc-bnXvFD eorMUq"><i size="26" class="sc-bdVaJa gAsYWw sc-gFaPwZ jcZzPk"
+            data-testid="icon:stopwatch"></i>
+        <div class="sc-fhYwyz jxvanQ">
+            <div class="sc-jzgbtB iHRDZQ">
+                <div width="50" class="sc-gJWqzi htEIqN"></div>
+            </div>
+            <div class="sc-rBLzX irwmBe">
+                <div>4h logged</div>
+                <div>8h estimated</div>
+            </div>
+        </div>
+    </div>
+    <div class="sc-hGoxap gZYqOY">
+        <div class="sc-fjmCvl ceYctA">
+            <div class="sc-TFwJa LcfLC">Time spent (hours)</div>
+            <div class="sc-kpOJdX bYAXKl"><input placeholder="Number" class="sc-dxgOiQ HrhWu" value="4"></div>
+        </div>
+        <div class="sc-fjmCvl ceYctA">
+            <div class="sc-TFwJa LcfLC">Time remaining (hours)</div>
+            <div class="sc-kpOJdX bYAXKl"><input placeholder="Number" class="sc-dxgOiQ HrhWu" value=""></div>
+        </div>
+    </div>
+    <div class="sc-bHwgHz fplWgf"><button class="sc-bwzfXH dIxFno">
+            <div class="sc-bxivhb rljZq">Done</div>
+        </button></div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Log more 4 hours to Time tracking
+there are more cards with that id, use text as well
+assert the changes
+
+-----------------------
+
+click on stopwatch instead of time tracking
