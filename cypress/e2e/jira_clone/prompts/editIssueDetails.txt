@@ -1,0 +1,58 @@
+**CONTEXT**
+Answer like a software engineer.
+I have the HTML below and I want you to create an E2E test case for it using Cypress syntax. The answer must be ONLY
+code, you don’t need to explain it.
+
+**CODE EXPLANATION**
+The code ahead is an HTML fragment of an application very similar to Jira.
+
+**CODE**
+*Card on Home*
+<div class="sc-kPVwWT eYJELZ">
+    <p class="sc-kfGgVZ duybNU">This is an issue of type: Task.</p>
+</div>
+
+*Card Details*
+<div class="sc-fYiAbW erRKGE">
+    <div class="sc-gHboQg cTinVM">Status</div>
+    <div class="sc-cMljjf jnweIx" tabindex="0">
+        <div data-testid="select:status" class="sc-jAaTju kMAIqY">
+            <div color="backlog" class="sc-eilVRo kvGNcT">
+                <div>Backlog</div><i size="18" class="sc-bdVaJa RfveL" data-testid="icon:chevron-down"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+*Click Status*
+<div class="sc-hzDkRC OIdAg">
+    <div data-select-option-value="selected" data-testid="select-option:Selected for development"
+        class="sc-jhAzac eiGXZa jira-select-option-is-active">
+        <div color="selected" class="sc-eilVRo hrbdOS">Selected for development</div>
+    </div>
+    <div data-select-option-value="inprogress" data-testid="select-option:In progress" class="sc-jhAzac eiGXZa">
+        <div color="inprogress" class="sc-eilVRo guTdvC">In progress</div>
+    </div>
+    <div data-select-option-value="done" data-testid="select-option:Done" class="sc-jhAzac eiGXZa">
+        <div color="done" class="sc-eilVRo iXQwlr">Done</div>
+    </div>
+</div>
+
+**TEST CASES REQUEST**
+I want you to create a test in Cypress syntax for each of the following use cases:
+1) As a user, I should be able to edit card details.
+
+**OBSERVATIONS**
+Url is https://jira.ivorreic.com/project/board
+Wait 15 seconds after the page loads.
+Wait 3s after to load card details.
+Click on the card, wait, click on the status, and update it to Done.
+
+------------
+
+there are more cards with that id, use text as well
+
+------------
+
+add an assert after updating the status
+
