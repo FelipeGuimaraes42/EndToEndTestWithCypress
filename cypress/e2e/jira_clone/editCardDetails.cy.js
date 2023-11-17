@@ -25,7 +25,14 @@ describe('Edit Comment on Issue', () => {
         cy.get('.sc-bwzfXH.dIxFno')
             .click();
 
-        // Assert that the edited text is on the page
+        // Assert that the first edited text is on the page
         cy.contains('.ql-editor', 'pneumonoultramicroscopicsilicovolcanoconiosis');
+
+        // Get the title textarea and type the second biggest English word, then press Enter
+        cy.get('.sc-fMiknA.edMYdI.sc-epnACN.dYOCoN textarea')
+            .type('hippopotomonstrosesquippedaliophobia {enter}');
+
+        // Assert that the second edited text is on the page
+        cy.contains('.sc-fMiknA.edMYdI.sc-epnACN.dYOCoN textarea', 'hippopotomonstrosesquippedaliophobia');
     });
 });

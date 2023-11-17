@@ -57,10 +57,14 @@ Use contains to get components.
 
 -----------
 
-Now update title:
+Awesome! Now update the title. Add now the second biggest english word:
 
 <div class="sc-fMiknA edMYdI sc-epnACN dYOCoN">
     <textarea placeholder="Short summary" style="height: 78px;">
         Each issue has a single reporter but can have multiple assignees.
     </textarea>
 </div>
+
+-----------
+
+title does not have save button, use enter instead
